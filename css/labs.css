@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container-glass {
+  margin: 5rem;
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.08);
+  display: inline-block;
+}
+.container-glass::before,
+.container-glass::after {
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.08);
+}
+.container-glass {
+  position: relative;
+  padding: 2rem 1.5rem;
+  width: 80%;
+  max-width: 280px;
+}
+.container-glass::before,
+.container-glass::after {
+  content: "";
+  position: absolute;
+}
+.container-glass::before {
+  height: 80px;
+  width: 80px;
+  top: -10px;
+  left: -40px;
+  z-index: -1;
+}
+.container-glass::after {
+  height: 40px;
+  width: 40px;
+  bottom: 20px;
+  right: -10px;
+  z-index: 2;
+}
+
+.container-glass .img {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.container-glass .text {
+  font-size: 1.01rem;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 2rem 0;
+  text-align: justify;
+}
+
+.container-glass .btn {
+  display: block;
+  margin: auto;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.02rem;
+  width: 80%;
+  max-width: 200px;
+  padding: 0.6rem 1rem;
+  background-color: transparent;
+  border: 1px solid #ffdd00;
+  border-radius: 5px;
+  color: #ffdd00;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.container-glass .btn:hover {
+  background-color: #ffdd00;
+  color: #333;
+}
+.container {
+  display: flex;
+
+  justify-content: center;
+  flex-direction: row;
+}
+.labs h1 {
+  font-size: 5rem;
+  color:white;
+  text-align: center;
+}
+.labs a {
+  text-decoration: none;
+  color:wheat;
+}
+#lab1 {
+  font-family: 'Dongle', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 7rem;
+  padding: 24px;
+  display: none;
+  border: 6px solid orange;
+  border-radius: 9px;
+  animation: fadeInUp 1s ease-in-out 0s forwards;
+ 
+}
+
+.container .labs a:hover{
+ color: chocolate;
+ background-color:rgb(255, 192, 147);
+ border-radius: 7px;
+ padding: 5px;
+}
+#lab2 {
+  font-family: 'Dongle', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 7rem;
+  padding: 24px;
+  display: none;
+  border: 6px solid orange;
+  border-radius: 9px;
+  animation: fadeInUp 1s ease-in-out 0s forwards;
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  0% {
+     opacity: 0;
+     transform: translateX(90px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
+} 
+
+.container-glass{
+  opacity: 0;
+  animation: fadeInRight 1s ease-in-out 0s forwards;
+}
+
+
+
+
